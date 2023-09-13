@@ -45,6 +45,32 @@
             </tr>
         </table>
         <hr>
-
+        <h3>Snipper Code: Image Illustration Filter</h3>
+        <blockquote cite="https://stackoverflow.com/questions/44688722/how-do-i-add-a-filter-to-a-background-image-in-the-body">
+            How do I add a filter to a background image in the body?
+        </blockquote>
+        <pre>
+            :root {
+                --color-primary: hsl(0 0% 15%);
+                --color-accent: hsl(16.1 5% 55.5%);
+                --color-tertiary: aqua;
+              }
+              
+              .painted {
+                background: repeating-radial-gradient(
+                  circle at center,
+                  var(--color-primary),
+                  var(--color-accent)
+                );
+                background-size: 5px;
+              }
+              
+              .painted img {
+                filter: blur(4px) contrast(3000%) grayscale(1);
+                mix-blend-mode: screen;
+                width: 100%;
+              }
+        </pre>
+        <a href="https://css-tricks.com/snippets/css/image-illustration-filter/">Source of Snippet Code</a>
     </body>
 </html>
